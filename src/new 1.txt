@@ -1,0 +1,21 @@
+
+Steps
+Download the SMSLib jar file from http://smslib.org/download/
+Download the RXTX library. If on a 32-bit system, download the file  rxtx-2.1-7-bins-r2.zip from http://rxtx.qbang.org/wiki/index.php/Download . If on a 64-bit system, download the Windows-x64 file from http://fizzed.com/oss/rxtx-for-java
+Download the Log4j 1.x library from https://logging.apache.org/log4j/1.2/download.html
+Unzip the Log4j zip package to some folder e.g. C:\temp
+Unzip the RXTX package to some folder e.g. C:\temp
+Copy the file RXTXComm.jar to the JDK_DIR\jre\lib\ext directory and the JRE_DIR\lib\ext directory
+Copy the file rxtxSerial.dll to the JDK_DIR\jre\bin directory and the JRE_DIR\bin directory
+Connect your GSM modem to the computer and determine the COM port allocated to it. Press the Windows button on the keyboard and type Device Manager in the search box. Open Device Manager and expand the Modems item. Right-click on your modem and select Properties. Click on the Modem tab and note down the Port indicated at the top.
+Ensure the sim card in the modem is active and has sufficient credit
+Start NetBeans
+Select the File | New Project menu
+Select the Java Category and Java Application Project
+Click Next
+Provide a Project Name e.g. smslib and click on Finish
+Right-click on the Libraries folder under your project and select Add JAR/Folder...
+Select the smslib-3.5.4.jar file according to the path in which you downloaded it to
+Right-click on the Libraries folder again and select Add JAR/Folder...
+Select the log4j-1.2.17.jar file according to the path where you unzipped the log4j zip package
+In the code editor window, insert code like the one below, replacing the COM port, mobile number and class name if applicable
